@@ -13,6 +13,10 @@ class no{
 			dado=dado_en;
 			prox=ant_entrada;
 		}
+		void print()
+		{
+			cout<<*dado<<"|"<<prox;
+		}
 		
 		friend ostream& operator << (ostream& out, const no<T>& dado);
 		

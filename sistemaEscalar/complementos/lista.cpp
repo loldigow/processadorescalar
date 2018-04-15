@@ -34,7 +34,7 @@ namespace pipe
 			no<T>*aux=inicio;
 			while(aux)
 			{
-				cout<<aux->dado<<", ";
+				cout<<*(aux->dado)<<", ";
 				aux=aux->prox;
 			}
 		}

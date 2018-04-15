@@ -18,7 +18,9 @@ template <class T>
 			void remove();
 			T primeiro_dado();
 			T ultimo_dado();
+			T get_position(int pos);
 			bool vazia();
+			int getsize(){return this->size;}
 			void limpa_fila();
 			void invert();		
 	};

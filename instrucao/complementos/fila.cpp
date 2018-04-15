@@ -15,11 +15,13 @@
 		if(inicio)
 		{
 			fim->prox=new no<T>(dado_para_inserir,0);
+			size++;
 			fim=fim->prox;
 		}
 		else
 		{
 			inicio=new no<T>(dado_para_inserir,0);
+			size++;
 			fim=inicio;
 		}
 	}
@@ -33,7 +35,7 @@
 			no<T>*aux=inicio;
 			while(aux)
 			{
-				cout<<aux->dado<<", ";
+				cout<<(aux->dado)<<", ";
 				aux=aux->prox;
 			}
 		}
@@ -50,11 +52,13 @@
 			{
 				no<T>*aux=inicio;
 				inicio=aux->prox;
+				size--;
 				delete(aux);
 			}
 			else
 			{
 				no<T>* aux=inicio;
+				size--;
 				delete(aux);
 				inicio=0;
 				fim=0;
@@ -73,6 +77,24 @@
 			return inicio->dado;
 		}
 		else return 0;
+	}
+
+	template <class T>
+	T fila<T>::get_position(int pos)
+	{
+		if(pos>=0 && pos<this->size)
+		{
+			 no<T>* aux=inicio;
+			int i=0;
+			while(i<pos)
+			{
+			    aux=aux->prox;
+				i++;
+			}
+			return aux->dado;
+		}
+		else cout<<"posicao invalida";
+		return 0;
 	}
 
 
