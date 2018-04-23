@@ -7,5 +7,5 @@ int main()
     //cout<<B;
     pipeline A;
     A.teste();
-
+    ///eai ow
 }
